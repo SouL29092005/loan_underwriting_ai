@@ -1,0 +1,6 @@
+output.txt
+node_modules/
+__pycache__/
+.env
+saved_models/*.pkl
+dist/
