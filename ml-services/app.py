@@ -8,7 +8,6 @@ from pathlib import Path
 
 app = FastAPI()
 
-# Enable CORS for local React frontend
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -76,7 +75,6 @@ def predict(request: LoanRequest):
 
     data = request.model_dump()
 
-    # Clean categorical values to match training data (strip leading/trailing spaces)
     if isinstance(data.get("education"), str):
         data["education"] = data["education"].strip()
     if isinstance(data.get("self_employed"), str):
