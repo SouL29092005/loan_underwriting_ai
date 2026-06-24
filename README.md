@@ -180,15 +180,22 @@ Prediction + Confidence + Explanation
 loan_underwriting_ai/
 │
 ├── frontend/
-│   ├── React Application
-│   ├── Voice Assistant
-│   └── Loan Application UI
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   └── package.json
 │
-├── ml/
-│   ├── train.py
-│   ├── app.py
+├── backend/
+│   ├── server.js
+│   └── package.json
+│
+├── ml-services/
+│   ├── data/
 │   ├── saved_models/
-│   └── data/
+│   ├── app.py
+│   ├── train.py
+│   └── start.bat
 │
 └── README.md
 ```
@@ -217,7 +224,7 @@ This loads the trained model and starts the prediction API on port 8000.
 
 ### Step 2: Start the Backend Server
 
-Open a new terminal:
+Open a new terminal; run this:
 
 ```bash
 cd backend
@@ -228,7 +235,7 @@ npm run start
 
 ### Step 3: Start the Frontend
 
-Open another terminal:
+Open another terminal and run this:
 
 ```bash
 cd frontend
